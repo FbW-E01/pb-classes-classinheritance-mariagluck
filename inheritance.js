@@ -45,8 +45,6 @@ class Publication {
 
 const IAllende = new Publication("Isabel Allende", "La casa de los espíritus", "The story details the life of the Trueba family, spanning four generations, and tracing the post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.");
 
-
-//IAllende.id(); // id: IA-7953
 console.log(IAllende);
 
 // id: IA-7953
@@ -54,7 +52,8 @@ console.log(IAllende);
 //   author: 'Isabel Allende',
 //   name: 'La casa de los espíritus',
 //   content: "The story details the life of the Trueba family, spanning four generations, and tracing the post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.",
-//   created: 2021-05-20T12:14:17.882Z
+//   created: 2021-05-20T12:14:17.882Z,
+// id: 'IA-5307'
 // }
 
 
@@ -85,6 +84,7 @@ blog1.numPosts(); //July SuperBogger has published 5 posts
 //     name: 'Blog Post'
 //     content: 'edited by July SP',
 //     created: 2021-05-20T12:14:17.888Z,
+//     id: 'JS-8016',
 //     edited: 'This is what this blogpost is about, bla bla, super important stuff about blog posts!',
 //     address: 'Kreuzberg, Berlin, DE'
 //   }
@@ -99,6 +99,7 @@ blog2.numPosts(); // Luzy BoringBlogger has published 6 posts
 //     name: Blog Post,
 //     content: edited by Luzy BB,
 //     created: 2021-05-20T12:14:17.888Z,
+//     id: 'LB-3014',
 //     edited: 'Today we talk about the importance of getting bored and dealing with fustration',
 //     address: 'NYC, USA'
 //   }
@@ -113,6 +114,7 @@ blog3.numPosts(); // Tommy Lee Sunny has published 4 posts
 //     name: Blog Post,
 //     content: edited by Tommy LeeS,
 //     created: 2021-05-20T12:14:17.889Z,
+//     id: 'TLS-1970',
 //     edited: 'About the strange life of wild bears in hivernation when there is global warming and clima change!',
 //     address: 'Antartica DC, Antartica'
 //   }
@@ -133,7 +135,6 @@ class Book extends Publication {
 
     }
     ISBNcode() {
-        const ISBNnum = Math.floor(10000000 + Math.random() * 90000000) + "-" + Math.floor(Math.random() * 10);
         console.log(this.ISBN);
     }
         
@@ -147,6 +148,7 @@ academicBook.ISBNcode(); //Book reference: ISBN73323849-2
 //     name: 'Contemporary sociology',
 //     content: "In this new book, Bauman examines how we have moved away from a 'heavy' and 'solid', hardware-focused modernity to a 'light' and 'liquid', software-based modernity. This passage, he argues, has brought profound change to all aspects of the human condition. ...",
 //     created: 2021-05-20T12:40:00.423Z,
+//     ISBN: 'ISBN54991106-4'
 //     title: 'Liquid Modernity'
 //   }
 //   Book reference: ISBN73323849-2
@@ -161,6 +163,7 @@ SciFiBook.ISBNcode(); //Book reference: ISBN55480383-5
 //     content: 'The Dispossessed: An Ambiguous Utopia is a 1974 utopian science fiction novel by American writer Ursula K. Le Guin, set in the fictional universe of the seven novels of the Hainish Cycle, e.g. The Left Hand of Darkness.',
 //     created: 2021-05-20T12:41:49.527Z,
 //     title: 'The Dispossessed'
+//     ISBN: 'ISBN84772585-0'
 //   }
 //   Book reference: ISBN55480383-5
 
@@ -175,6 +178,7 @@ ComicBook.ISBNcode(); //Book reference: ISBN51695695-4
 //     content: 'This One Summer is a graphic novel written by Mariko Tamaki and illustrated by Jillian Tamaki published by First Second Books in 2014. It is a coming of age story about two teenage friends, Rose and Windy, during a summer in Awago, a small beach town',
 //     created: 2021-05-20T12:42:59.996Z,
 //     title: 'This One Summer'
+//     ISBN: 'ISBN55270245-6'
 //   }
 //   Book reference: ISBN51695695-4
 
@@ -204,6 +208,7 @@ console.log(kidsBookFan);
 //     name: 'Children book',
 //     content: 'To escape from his dull life and bullies at school, Bastain takes refuge in an old book store. There, he begins reading an old storybook and finds himself drawn into the mythical world of Fantasia.',
 //     created: 2021-05-20T12:38:09.038Z,
+//     id: 'ME-8668'
 //     type: 'Fantasy',
 //     title: 'The NeverEnding Story'
 //   }
@@ -215,6 +220,7 @@ console.log(kidsBookPippi);
 //     name: 'Children book',
 //     content: "Pippi Longstocking is the fictional main character in an eponymous series of children's books by Swedish author Astrid Lindgren. Pippi was named by Lindgren's daughter Karin, who asked her mother for a get-well story when she was off school",
 //     created: 2021-05-20T12:33:45.027Z,
+//     id: 'AL-5998',
 //     type: 'fiction',
 //     title: 'Pippi Langstrumpf'
 //   }
@@ -228,6 +234,7 @@ console.log(kidsBookMonsters);
 //     name: 'Children book',
 //     content: 'Bedtime Story`,
 //     created: 2021-05-20T12:35:32.480Z,
+//     id: 'SB-1649',
 //     type: 'What if an entire world of MONSTERS lived underneath your floor? Martina is having trouble sleeping because she is afraid monsters might break through the floor and bring her into the monster world where she’ll have to learn how to scare humans...',
 //     title: 'Bedtime story'
 //   }
