@@ -11,20 +11,18 @@
 // - All publications need a method that prints out their description (id, name, authors)
 
 class Publication {
-    //id;
     author;
     name;
     content;
     created;
 
     constructor( author = null, name = null, content = null) {
-        //this.id = [];
         this.author = author;
         this.name = name;
         this.content = content;
         this.created = new Date();
     }
-    id() {
+    id() { //I created an id "maker" for book entries
         let initials = this.author.split(' ').map(function(word) { return word[0]}).join('');
         let id = initials + "-" + (Math.floor(1000 + Math.random() * 9000));
         console.log(`id: ${id}`);
@@ -46,14 +44,16 @@ class Publication {
 const IAllende = new Publication("Isabel Allende", "La casa de los espíritus", "The story details the life of the Trueba family, spanning four generations, and tracing the post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.");
 
 
-IAllende.id(); // id: IA-7062
+IAllende.id(); // id: IA-7953
 console.log(IAllende);
+
+// id: IA-7953
 // Publication {
-//     author: 'Isabel Allende',
-//     name: 'La casa de los espíritus',
-//     content: "The story details the life of the Trueba family, spanning four generations, and tracing the  post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely  paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told  mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.",
-//     created: 2021-05-20T11:21:52.761Z
-//   }
+//   author: 'Isabel Allende',
+//   name: 'La casa de los espíritus',
+//   content: "The story details the life of the Trueba family, spanning four generations, and tracing the post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.",
+//   created: 2021-05-20T12:14:17.882Z
+// }
 
 
 
@@ -78,16 +78,44 @@ const blog1 = new Blogpost("July SuperBlogger", "This is what this blogpost is a
 
 console.log(blog1);
 blog1.numPosts(); //July SuperBogger has published 5 posts
+// Blogpost {
+//     author: 'July SuperBlogger',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.888Z,
+//     edited: 'This is what this blogpost is about, bla bla, super important stuff about blog posts!',
+//     address: 'Kreuzberg, Berlin, DE'
+//   }
+
 
 const blog2 = new Blogpost("Luzy BoringBlogger", "Today we talk about the importance of getting bored and dealing with fustration", "NYC, USA");
 
 console.log(blog2);
-blog2.numPosts();
+blog2.numPosts(); // Luzy BoringBlogger has published 6 posts
+// Blogpost {
+//     author: 'Luzy BoringBlogger',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.888Z,
+//     edited: 'Today we talk about the importance of getting bored and dealing with fustration',
+//     address: 'NYC, USA'
+//   }
+
 
 const blog3 = new Blogpost("Tommy Lee Sunny", "About the strange life of wild bears in hivernation when there is global warming and clima change!", "Antartica DC, Antartica");
 
 console.log(blog3);
-blog3.numPosts();
+blog3.numPosts(); // Tommy Lee Sunny has published 4 posts
+// Blogpost {
+//     author: 'Tommy Lee Sunny',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.889Z,
+//     edited: 'About the strange life of wild bears in hivernation when there is global warming and clima change!',
+//     address: 'Antartica DC, Antartica'
+//   }
+
+
 
 
 // 3. Create a class called "Book" that is a child of Publication
@@ -111,17 +139,40 @@ class Book extends Publication {
 const academicBook = new Book("Zygmunt Bauman", "Liquid Modernity");
 console.log(academicBook);
 academicBook.ISBNcode(); //Book reference: ISBN73323849-2
+// Book {
+//     author: 'Zygmunt Bauman',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.889Z,
+//     title: 'Liquid Modernity'
+//   }
+//   Book reference: ISBN73323849-2
 
 
 const SciFiBook = new Book("Ursula K. Le Guin", "The Dispossessed");
 console.log(SciFiBook);
 SciFiBook.ISBNcode(); //Book reference: ISBN55480383-5
+// Book {
+//     author: 'Ursula K. Le Guin',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.889Z,
+//     title: 'The Dispossessed'
+//   }
+//   Book reference: ISBN55480383-5
 
 
 const ComicBook = new Book("Mariko Tamaki", "This One Summer");
 console.log(ComicBook);
 ComicBook.ISBNcode(); //Book reference: ISBN51695695-4
-
+// Book {
+//     author: 'Mariko Tamaki',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.890Z,
+//     title: 'This One Summer'
+//   }
+//   Book reference: ISBN51695695-4
 
 
 
@@ -141,15 +192,40 @@ class Score extends Publication {
     }
 }
 
+
 const kidsBookFan = new Score("Michael Ende", "Fantasy", "The NeverEnding Story",);
 console.log(kidsBookFan);
+// Score {
+//     author: 'Michael Ende',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.890Z,
+//     type: 'Fantasy',
+//     title: 'The NeverEnding Story'
+//   }
 
 const kidsBookPippi = new Score("Astrid Lindgren", "fiction", "Pippi Langstrumpf");
 console.log(kidsBookPippi);
+// Score {
+//     author: 'Astrid Lindgren',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.891Z,
+//     type: 'fiction',
+//     title: 'Pippi Langstrumpf'
+//   }
+
 
 const kidsBookMonsters = new Score("Santi Balmes", "Bedtime story", "I Will Fight Monsters for You");
 console.log(kidsBookMonsters);
 
-
+//   Score {
+//     author: 'Santi Balmes',
+//     name: null,
+//     content: null,
+//     created: 2021-05-20T12:14:17.891Z,
+//     type: 'Bedtime story',
+//     title: 'I Will Fight Monsters for You'
+//   }
 
 
