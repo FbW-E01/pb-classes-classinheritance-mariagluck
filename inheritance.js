@@ -46,8 +46,6 @@ class Publication {
 const IAllende = new Publication("Isabel Allende", "La casa de los espíritus", "The story details the life of the Trueba family, spanning four generations, and tracing the post-colonial social and political upheavals of Chile – though the country's name and the names of figures closely paralleling historical ones, such as 'the President' or 'the Poet', are never explicitly given. The story is told mainly from the perspective of two protagonists (Esteban and Alba) and incorporates elements of magical realism.");
 
 console.log(IAllende);
-
-// id: IA-7953
 // Publication {
 //   author: 'Isabel Allende',
 //   name: 'La casa de los espíritus',
@@ -82,30 +80,30 @@ blog1.numPosts(); //July SuperBogger has published 5 posts
 // Blogpost {
 //     author: 'July SuperBlogger',
 //     name: 'Blog Post'
-//     content: 'edited by July SP',
+//     content: This is what this blogpost is about, bla bla, super important stuff about blog posts!',
 //     created: 2021-05-20T12:14:17.888Z,
 //     id: 'JS-8016',
-//     edited: 'This is what this blogpost is about, bla bla, super important stuff about blog posts!',
+//     edited: 'edited by July SP',
 //     address: 'Kreuzberg, Berlin, DE'
 //   }
 
 
-const blog2 = new Blogpost("Luzy BoringBlogger", "Blog Post", "edited by Luzy BB", "Today we talk about the importance of getting bored and dealing with fustration", "NYC, USA");
+const blog2 = new Blogpost("Luzy BoringBlogger", "Blog Post",  "Today we talk about the importance of getting bored and dealing with fustration","edited by Luzy BB", "NYC, USA");
 
 console.log(blog2);
 blog2.numPosts(); // Luzy BoringBlogger has published 6 posts
 // Blogpost {
 //     author: 'Luzy BoringBlogger',
 //     name: Blog Post,
-//     content: edited by Luzy BB,
+//     content: Today we talk about the importance of getting bored and dealing with fustration',
 //     created: 2021-05-20T12:14:17.888Z,
 //     id: 'LB-3014',
-//     edited: 'Today we talk about the importance of getting bored and dealing with fustration',
+//     edited: 'edited by Luzy BB,
 //     address: 'NYC, USA'
 //   }
 
 
-const blog3 = new Blogpost("Tommy Lee Sunny", "Blog Post", "edited by Tommy LeeS", "About the strange life of wild bears in hivernation when there is global warming and clima change!", "Antartica DC, Antartica");
+const blog3 = new Blogpost("Tommy Lee Sunny", "Blog Post",  "About the strange life of wild bears in hivernation when there is global warming and clima change!","edited by Tommy LeeS", "Antartica DC, Antartica");
 
 console.log(blog3);
 blog3.numPosts(); // Tommy Lee Sunny has published 4 posts
